@@ -26,7 +26,12 @@ export default class NavbarIcons extends Component {
     return (
       <IconWrapper>
         {this.state.icons.map(item => (
-          <a href={item.path} key={item.id} target="_blank">
+          <a
+            href={item.path}
+            key={item.id}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item.icon}
           </a>
         ))}
@@ -53,7 +58,7 @@ const IconWrapper = styled.div`
     color: #da5f53;
   }
   .icon:hover {
-    color: ${styles.colors.mainYellow};
+    color: ${styles.colors.mainPrimary};
   }
   display: none;
   @media (min-width: 768px) {
